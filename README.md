@@ -21,7 +21,12 @@ This module cron insgram with supporrt library http guzzlehttp
        $clientRequest->like("OWNER_ID") // This is ID of a media post you need like    
     
     . Note: 
-         - You can send request load info OWNER_ID and MEDIA_ID with name hastag of instagram
+            
+        - You has send more requests for jobs so you needs only call :
+
+            $clientRequest = new Init($login);
+            
+        - You can send request load info OWNER_ID and MEDIA_ID with name hastag of instagram
      
          Ex: 
                $dataTag = $clientRequest->tagsResponse("[Array data tags name]")    
@@ -34,7 +39,4 @@ This module cron insgram with supporrt library http guzzlehttp
                 {
                     return $this->objTag->getMultiTags($dataTag);
                 }
-                
-        - You has send more requests for jobs so you needs only call
         
-            $clientRequest = new Init($login);
